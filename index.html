@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apex Liquidity — Master the Markets</title>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-34E3K3XB3K"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-34E3K3XB3K');
+  </script>
+
+  <!-- SEO -->
+  <meta name="description" content="Institutional trading knowledge for serious retail traders. Master liquidity, market structure, and smart money concepts with Apex Liquidity." />
+  <meta name="theme-color" content="#0a0a0a" />
+
+  <!-- Open Graph (WhatsApp, Instagram link previews) -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://apexliquidity.com/" />
+  <meta property="og:title"       content="Apex Liquidity — Master the Markets" />
+  <meta property="og:description" content="Institutional trading knowledge retail traders were never meant to have. No indicators. No noise. Just the raw mechanics of how capital moves." />
+  <meta property="og:image"       content="https://apexliquidity.com/og-image.jpg" />
+
+  <!-- Twitter / X card -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="Apex Liquidity — Master the Markets" />
+  <meta name="twitter:description" content="Institutional trading knowledge retail traders were never meant to have." />
+  <meta name="twitter:image"       content="https://apexliquidity.com/og-image.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500&family=Bebas+Neue&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css?v=38" />
+  <script src="https://cdn.jsdelivr.net/npm/motion@latest/dist/motion.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+  <!-- PayPal SDK (Hosted Buttons) -->
+  <script src="https://www.paypal.com/sdk/js?client-id=BAAzouUMjg69BBdItw8p6ACImi4NnyABkKpiqyp0BVqEbiDBqgwJFE6NHtCc95-HUFwkN_rz4T0U1PRuLY&components=hosted-buttons&disable-funding=venmo&currency=USD"></script>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="logo">
+        <span class="logo-apex">APEX</span>
+        <span class="logo-liq">LIQUIDITY</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#books">Books</a></li>
+        <li><a href="#resources">Resources</a></li>
+        <li><a href="#calculator">Calculator</a></li>
+        <li><a href="#community">Community</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a href="#books" class="nav-cta">Get Access</a>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#books" onclick="closeMobile()">Books</a>
+      <a href="#resources" onclick="closeMobile()">Resources</a>
+      <a href="#calculator" onclick="closeMobile()">Calculator</a>
+      <a href="#community" onclick="closeMobile()">Community</a>
+      <a href="#contact" onclick="closeMobile()">Contact</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <video id="heroVideo" autoplay muted loop playsinline preload="auto" aria-hidden="true"
+      style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;pointer-events:none">
+      <source src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260429_114316_1c7889ad-2885-410e-b493-98119fee0ddb.mp4" type="video/mp4">
+    </video>
+    <div id="heroVideoTint" aria-hidden="true"
+      style="position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(0,0,0,.35) 0%,rgba(0,0,0,.75) 100%);z-index:1;pointer-events:none"></div>
+    <div class="hero-bg" style="display:none"></div>
+    <div class="hero-content" style="position:relative;z-index:3">
+      <h1 class="hero-title">
+        <span class="title-apex"><span class="apex-letter">A</span><span class="apex-letter">P</span><span class="apex-letter">E</span><span class="apex-letter">X</span></span>
+        <span class="title-liq">LIQUIDITY</span>
+      </h1>
+      <p class="hero-sub">Trading knowledge <em style="color:#C4962E;font-style:italic">not of this world.</em><br/>Institutional-grade insight, taught from every corner of the market.</p>
+      <div class="hero-actions">
+        <a href="#books" class="btn-gold">Access the Vault</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- MANIFESTO -->
+  <section id="manifesto">
+    <div class="money-columns purple">
+      <div class="money-col"></div><div class="money-col"></div><div class="money-col"></div>
+      <div class="money-col"></div><div class="money-col"></div><div class="money-col"></div>
+    </div>
+    <div class="manifesto-overlay"></div>
+    <div class="container">
+      <div class="manifesto-inner">
+        <div class="manifesto-line"></div>
+        <blockquote class="manifesto-quote">
+          "The market is a reflection of collective human psychology.<br />
+          Those who understand liquidity, understand power."
+        </blockquote>
+        <div class="manifesto-line"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="about-section">
+    <div class="about-content">
+      <h2 class="about-title">Built for the serious trader.</h2>
+      <p class="about-text">Apex Liquidity exists for one reason — to give retail traders the institutional knowledge they were never meant to have. No indicators. No noise. Just the raw mechanics of how capital moves.</p>
+    </div>
+
+    <div class="marquee-track">
+      <div class="marquee-row marquee-left">
+        <span>LIQUIDITY</span><span>·</span><span>STRUCTURE</span><span>·</span><span>PRECISION</span><span>·</span><span>EDGE</span><span>·</span>
+        <span>LIQUIDITY</span><span>·</span><span>STRUCTURE</span><span>·</span><span>PRECISION</span><span>·</span><span>EDGE</span><span>·</span>
+        <span>LIQUIDITY</span><span>·</span><span>STRUCTURE</span><span>·</span><span>PRECISION</span><span>·</span><span>EDGE</span><span>·</span>
+      </div>
+      <div class="marquee-row marquee-right">
+        <span>INSTITUTIONAL</span><span>·</span><span>SMART MONEY</span><span>·</span><span>ORDER FLOW</span><span>·</span><span>BIAS</span><span>·</span>
+        <span>INSTITUTIONAL</span><span>·</span><span>SMART MONEY</span><span>·</span><span>ORDER FLOW</span><span>·</span><span>BIAS</span><span>·</span>
+        <span>INSTITUTIONAL</span><span>·</span><span>SMART MONEY</span><span>·</span><span>ORDER FLOW</span><span>·</span><span>BIAS</span><span>·</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOKS -->
+  <section id="books">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">P R E M I U M &nbsp; K N O W L E D G E</p>
+        <h2 class="section-title">The Library</h2>
+        <p class="section-sub">Each volume is a deep dive into institutional trading concepts — written to give you the edge that most retail traders never find.</p>
+      </div>
+
+      <div class="books-grid">
+
+        <!-- Book 1: Anchored -->
+        <div class="book-card featured has-image-cover" data-book="anchored">
+          <div class="book-cover has-image">
+            <img src="covers/anchored-cover.png" alt="Anchored — Read the Market. Trust the Level." class="book-cover-img" />
+            <div class="book-cover-fade"></div>
+            <div class="book-badge">BESTSELLER</div>
+          </div>
+          <div class="book-info">
+            <h3 class="book-title">Anchored</h3>
+            <p class="book-desc">The foundational guide to understanding market structure, smart money concepts, and how institutional players move price. From order blocks to liquidity sweeps — stay anchored to what the market is actually doing.</p>
+            <ul class="book-chapters">
+              <li>Introduction to Liquidity</li>
+              <li>Market Structure & Order Flow</li>
+              <li>Smart Money Concepts</li>
+              <li>Liquidity Sweeps & Traps</li>
+              <li>Entry Models & Kill Zones</li>
+            </ul>
+            <div class="book-footer">
+              <div class="book-price">
+                <span class="price-old">$49</span>
+                <span class="price-new">$36.99</span>
+              </div>
+              <button class="btn-gold btn-buy" onclick="window.open('https://apextrader6.gumroad.com/l/anchored','_blank')">Buy Now</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Book 2: Fortified -->
+        <div class="book-card has-image-cover" data-book="fortified">
+          <div class="book-cover has-image">
+            <img src="covers/fortified-cover.png" alt="Fortified — Risk Management Mastery" class="book-cover-img" />
+            <div class="book-cover-fade"></div>
+            <div class="book-badge new">NEW</div>
+          </div>
+          <div class="book-info">
+            <h3 class="book-title">Fortified</h3>
+            <p class="book-desc">The complete risk management framework for serious traders. Most traders have a plan — but fall apart when it counts. Fortified teaches you to build a system you'll actually follow when the pressure is real.</p>
+            <ul class="book-chapters">
+              <li>Position Sizing & Risk Per Trade</li>
+              <li>Drawdown Control & Recovery</li>
+              <li>Following Your Plan Under Pressure</li>
+              <li>Psychology of Losing Streaks</li>
+              <li>Building a Risk Framework You'll Actually Use</li>
+            </ul>
+            <div class="book-footer">
+              <div class="book-price">
+                <span class="price-old">$45</span>
+                <span class="price-new">$24.99</span>
+              </div>
+              <button class="btn-gold btn-buy" onclick="window.open('https://apextrader6.gumroad.com/l/fortified','_blank')">Buy Now</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bundle -->
+        <div class="book-card bundle-card">
+          <div class="bundle-covers">
+            <div class="bundle-cover" style="background-image: url('covers/anchored-cover.png');"></div>
+            <span class="bundle-plus">+</span>
+            <div class="bundle-cover" style="background-image: url('covers/fortified-cover.png'); background-position: center 8%;"></div>
+          </div>
+          <h3 class="bundle-title">Full Bundle</h3>
+          <p class="bundle-sub">Both books + exclusive bonus content</p>
+          <ul class="bundle-includes">
+            <li>✦ Anchored</li>
+            <li>✦ Fortified</li>
+            <li>✦ Bonus: Trade Journaling Template</li>
+            <li>✦ Bonus: Key Level Cheat Sheet</li>
+            <li>✦ Lifetime Access — Both Books</li>
+          </ul>
+          <div class="bundle-price-row">
+            <span class="price-old">$61.98</span>
+            <span class="bundle-price">$39.99</span>
+          </div>
+          <button class="btn-gold btn-buy full-width" onclick="window.open('https://apextrader6.gumroad.com/l/apexbundle','_blank')">Get the Bundle</button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- RESOURCES -->
+  <section id="resources">
+
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">W H A T &nbsp; Y O U ' L L &nbsp; M A S T E R</p>
+        <h2 class="section-title">The Edge</h2>
+        <p class="section-sub">The concepts the retail crowd never learns. The frameworks institutions don't share.</p>
+      </div>
+      <div class="mastery-grid">
+
+        <div class="mastery-card">
+          <div class="mastery-visual vis-liquidity">
+            <svg viewBox="0 0 80 60" xmlns="http://www.w3.org/2000/svg">
+              <line x1="8" y1="14" x2="72" y2="14" class="m-line" />
+              <line x1="8" y1="30" x2="72" y2="30" class="m-line" />
+              <line x1="8" y1="46" x2="72" y2="46" class="m-line m-line-target" />
+              <rect class="m-wick" x="38" y="22" width="4" height="14" rx="1" />
+            </svg>
+          </div>
+          <h4 class="mastery-title">Liquidity Theory</h4>
+          <p class="mastery-desc">Where the big money parks. Where stops get hunted. How to position before the sweep — not after the candle.</p>
+        </div>
+
+        <div class="mastery-card">
+          <div class="mastery-visual vis-structure">
+            <svg viewBox="0 0 80 60" xmlns="http://www.w3.org/2000/svg">
+              <path class="m-zigzag" d="M5 42 L18 22 L30 32 L44 14 L58 28 L74 18" />
+              <circle class="m-dot" cx="44" cy="14" r="2.2" />
+              <circle class="m-dot m-dot-2" cx="74" cy="18" r="2.2" />
+            </svg>
+          </div>
+          <h4 class="mastery-title">Market Structure</h4>
+          <p class="mastery-desc">Read price like smart money does — higher highs, lower lows, breaks of structure. The language of intent.</p>
+        </div>
+
+        <div class="mastery-card">
+          <div class="mastery-visual vis-smc">
+            <svg viewBox="0 0 80 60" xmlns="http://www.w3.org/2000/svg">
+              <rect class="m-block" x="18" y="20" width="44" height="14" rx="2" />
+              <line class="m-candle-wick"  x1="40" y1="50" x2="40" y2="34" />
+              <rect class="m-candle-body" x="36" y="40" width="8" height="10" />
+            </svg>
+          </div>
+          <h4 class="mastery-title">Smart Money Concepts</h4>
+          <p class="mastery-desc">Order blocks. Fair value gaps. Breakers. Mitigations. Every institutional footprint, mapped and named.</p>
+        </div>
+
+        <div class="mastery-card">
+          <div class="mastery-visual vis-mtf">
+            <svg viewBox="0 0 80 60" xmlns="http://www.w3.org/2000/svg">
+              <path class="m-tf m-tf-1" d="M5 12 L20 8 L35 14 L50 6 L65 12 L75 9" />
+              <path class="m-tf m-tf-2" d="M5 30 L20 26 L35 32 L50 22 L65 30 L75 26" />
+              <path class="m-tf m-tf-3" d="M5 48 L20 42 L35 50 L50 38 L65 46 L75 42" />
+            </svg>
+          </div>
+          <h4 class="mastery-title">Multi-Timeframe Analysis</h4>
+          <p class="mastery-desc">Macro bias meets micro precision. Know your setup has full confluence before you risk a single dollar.</p>
+        </div>
+
+        <div class="mastery-card">
+          <div class="mastery-visual vis-risk">
+            <svg viewBox="0 0 80 60" xmlns="http://www.w3.org/2000/svg">
+              <circle class="m-ring m-ring-1" cx="40" cy="30" r="20" />
+              <circle class="m-ring m-ring-2" cx="40" cy="30" r="13" />
+              <circle class="m-target"        cx="40" cy="30" r="3" />
+              <line class="m-cross" x1="14" y1="30" x2="66" y2="30" />
+              <line class="m-cross" x1="40" y1="6"  x2="40" y2="54" />
+            </svg>
+          </div>
+          <h4 class="mastery-title">Risk & Execution</h4>
+          <p class="mastery-desc">Position sizing, stop placement, trade management — the unsexy mechanics that keep accounts alive.</p>
+        </div>
+
+        <div class="mastery-card">
+          <div class="mastery-visual vis-psych">
+            <svg viewBox="0 0 80 60" xmlns="http://www.w3.org/2000/svg">
+              <circle class="m-pulse m-pulse-3" cx="40" cy="30" r="22" />
+              <circle class="m-pulse m-pulse-2" cx="40" cy="30" r="14" />
+              <circle class="m-pulse m-pulse-1" cx="40" cy="30" r="7"  />
+              <circle class="m-core"            cx="40" cy="30" r="3"  />
+            </svg>
+          </div>
+          <h4 class="mastery-title">Trading Psychology</h4>
+          <p class="mastery-desc">Master the war between conviction and fear. Cut the emotional decisions that quietly drain every retail account.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CALCULATOR -->
+  <section id="calculator">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">T R A D E &nbsp; S M A R T E R</p>
+        <h2 class="section-title calc-section-title">Trade <span class="title-accent">Calculators</span></h2>
+        <p class="section-sub">Know your exact risk before you enter. Every time.</p>
+      </div>
+      <div class="calc-accordion">
+
+        <!-- Position Size Calculator -->
+        <div class="calc-accordion-item">
+          <button type="button" class="btn-gold calc-toggle" onclick="toggleCalc(this, 'ps-panel')">
+            <span>Position Size Calculator</span>
+            <span class="calc-toggle-arrow">▾</span>
+          </button>
+          <div class="calc-panel" id="ps-panel">
+            <div class="calc-fields">
+              <div class="calc-field">
+                <label>Account Balance ($)</label>
+                <input type="number" id="ps-balance" placeholder="e.g. 1000" min="0"/>
+              </div>
+              <div class="calc-field">
+                <label>Risk Per Trade (%)</label>
+                <input type="number" id="ps-risk" placeholder="e.g. 1" min="0" max="100" step="0.1"/>
+              </div>
+              <div class="calc-field">
+                <label>Stop Loss (pips)</label>
+                <input type="number" id="ps-stop" placeholder="e.g. 30" min="0"/>
+              </div>
+              <div class="calc-field">
+                <label>Pip Value ($) <span class="calc-hint">— $10 per pip for most standard lots</span></label>
+                <input type="number" id="ps-pipval" placeholder="e.g. 10" min="0" step="0.01"/>
+              </div>
+            </div>
+            <button type="button" class="calc-btn" onclick="calcPositionSize()">Calculate</button>
+            <div class="calc-result" id="ps-result">
+              <div class="calc-result-row">
+                <span class="calc-result-label">Dollar Risk</span>
+                <span class="calc-result-value" id="ps-dollar-risk">—</span>
+              </div>
+              <div class="calc-result-row">
+                <span class="calc-result-label">Position Size (lots)</span>
+                <span class="calc-result-value" id="ps-lots">—</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- R:R Calculator -->
+        <div class="calc-accordion-item">
+          <button type="button" class="btn-gold calc-toggle" onclick="toggleCalc(this, 'rr-panel')">
+            <span>Risk : Reward Calculator</span>
+            <span class="calc-toggle-arrow">▾</span>
+          </button>
+          <div class="calc-panel" id="rr-panel">
+            <div class="calc-fields">
+              <div class="calc-field">
+                <label>Entry Price</label>
+                <input type="number" id="rr-entry" placeholder="e.g. 1.2640" step="0.0001"/>
+              </div>
+              <div class="calc-field">
+                <label>Stop Loss Price</label>
+                <input type="number" id="rr-stop" placeholder="e.g. 1.2610" step="0.0001"/>
+              </div>
+              <div class="calc-field">
+                <label>Take Profit Price</label>
+                <input type="number" id="rr-tp" placeholder="e.g. 1.2730" step="0.0001"/>
+              </div>
+              <div class="calc-field">
+                <label>Risk Amount ($)</label>
+                <input type="number" id="rr-risk-amt" placeholder="e.g. 50" min="0"/>
+              </div>
+            </div>
+            <button type="button" class="calc-btn" onclick="calcRR()">Calculate</button>
+            <div class="calc-result" id="rr-result">
+              <div class="calc-result-row">
+                <span class="calc-result-label">R:R Ratio</span>
+                <span class="calc-result-value" id="rr-ratio">—</span>
+              </div>
+              <div class="calc-result-row">
+                <span class="calc-result-label">Potential Profit</span>
+                <span class="calc-result-value" id="rr-profit">—</span>
+              </div>
+              <div class="calc-result-row">
+                <span class="calc-result-label">Verdict</span>
+                <span class="calc-result-value" id="rr-verdict">—</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- COMMUNITY -->
+  <section id="community">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">F O L L O W &nbsp; T H E &nbsp; J O U R N E Y</p>
+        <h2 class="section-title">Stay Connected</h2>
+        <p class="section-sub">Trade recaps, market breakdowns, and behind-the-scenes content — all on Instagram.</p>
+      </div>
+      <div class="community-cards">
+        <a href="https://www.instagram.com/apexliquidityreal/" target="_blank" class="comm-card instagram">
+          <div class="comm-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          </div>
+          <div class="comm-text">
+            <h4>Instagram</h4>
+            <p>@apexliquidityreal</p>
+          </div>
+          <span class="comm-arrow">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT YOU'LL MASTER -->
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">G E T &nbsp; I N &nbsp; T O U C H</p>
+        <h2 class="section-title">Contact</h2>
+        <p class="section-sub">For partnerships, bulk orders, or any enquiries.</p>
+      </div>
+      <!-- Formspree — replace YOUR_FORM_ID with your ID from formspree.io -->
+      <form class="contact-form" action="https://formspree.io/f/xeedoboz" method="POST">
+        <div class="form-row">
+          <div class="form-group">
+            <label>Name</label>
+            <input type="text" name="name" placeholder="Your name" required />
+          </div>
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" name="email" placeholder="your@email.com" required />
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Subject</label>
+          <input type="text" name="subject" placeholder="What's this about?" required />
+        </div>
+        <div class="form-group">
+          <label>Message</label>
+          <textarea name="message" placeholder="Your message..." rows="5" required></textarea>
+        </div>
+        <button type="submit" class="btn-gold">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <style>
+  /* LIQUID GLASS FOOTER */
+  @font-face{
+    font-family:"Helvetica Regular";
+    src:url("https://db.onlinewebfonts.com/t/a64ff11d2c24584c767f6257e880dc65.eot");
+    src:url("https://db.onlinewebfonts.com/t/a64ff11d2c24584c767f6257e880dc65.eot?#iefix")format("embedded-opentype"),
+        url("https://db.onlinewebfonts.com/t/a64ff11d2c24584c767f6257e880dc65.woff2")format("woff2"),
+        url("https://db.onlinewebfonts.com/t/a64ff11d2c24584c767f6257e880dc65.woff")format("woff"),
+        url("https://db.onlinewebfonts.com/t/a64ff11d2c24584c767f6257e880dc65.ttf")format("truetype");
+  }
+  .lg-wrap{padding:40px 20px 60px;display:flex;justify-content:center;font-family:"Helvetica Regular",Helvetica,Arial,sans-serif}
+  .liquid-glass{
+    background:rgba(255,255,255,0.01);background-blend-mode:luminosity;
+    backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);
+    border:none;box-shadow:inset 0 1px 1px rgba(255,255,255,0.1);
+    position:relative;overflow:hidden;
+    width:100%;max-width:1280px;border-radius:24px;
+    padding:40px 24px;color:rgba(255,255,255,.7);
+  }
+  @media(min-width:768px){.liquid-glass{padding:40px}}
+  .liquid-glass::before{
+    content:'';position:absolute;inset:0;border-radius:inherit;padding:1.4px;
+    background:linear-gradient(180deg,rgba(255,255,255,.45) 0%,rgba(255,255,255,.15) 20%,rgba(255,255,255,0) 40%,rgba(255,255,255,0) 60%,rgba(255,255,255,.15) 80%,rgba(255,255,255,.45) 100%);
+    -webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);
+    -webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none;
+  }
+  .lg-top{display:grid;grid-template-columns:1fr;gap:40px;margin-bottom:40px}
+  @media(min-width:768px){.lg-top{grid-template-columns:repeat(12,1fr);gap:48px}}
+  .lg-brand-col{display:flex;flex-direction:column;gap:16px}
+  @media(min-width:768px){.lg-brand-col{grid-column:span 5}}
+  .lg-brand{display:flex;align-items:center;gap:10px;color:#fff}
+  .lg-brand svg{width:24px;height:24px}
+  .lg-brand-text{font-size:20px;font-weight:500;letter-spacing:.06em}
+  .lg-desc{font-size:14px;line-height:1.6;max-width:380px;color:rgba(255,255,255,.65)}
+  .lg-links-col{display:grid;grid-template-columns:1fr;gap:32px}
+  @media(min-width:640px){.lg-links-col{grid-template-columns:repeat(3,1fr)}}
+  @media(min-width:768px){.lg-links-col{grid-column:span 7}}
+  .lg-col h5{
+    font-size:11px;text-transform:uppercase;letter-spacing:.16em;color:#fff;
+    font-weight:500;margin-bottom:16px;
+  }
+  .lg-col ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px}
+  .lg-col a{
+    font-size:12px;text-decoration:none;color:rgba(255,255,255,.7);
+    transition:color .2s;
+  }
+  .lg-col a:hover{color:#fff}
+  .lg-bottom{
+    padding-top:24px;border-top:1px solid rgba(255,255,255,.1);
+    display:flex;flex-direction:column;align-items:center;justify-content:space-between;
+    gap:24px;
+  }
+  @media(min-width:768px){.lg-bottom{flex-direction:row;gap:16px}}
+  .lg-copy{font-size:10px;text-transform:uppercase;letter-spacing:.16em;opacity:.5;margin:0}
+  .lg-socials{display:flex;align-items:center;gap:14px}
+  .lg-socials-label{font-size:10px;text-transform:uppercase;letter-spacing:.16em;opacity:.5}
+  .lg-socials a{
+    display:inline-flex;align-items:center;justify-content:center;
+    color:rgba(255,255,255,.7);opacity:.7;transition:opacity .2s,color .2s;
+  }
+  .lg-socials a:hover{opacity:1;color:#fff}
+  .lg-socials svg{width:16px;height:16px}
+  </style>
+
+  <div class="lg-wrap">
+    <footer id="glassFooter" class="liquid-glass" style="opacity:0;transform:translateY(40px)">
+      <div class="lg-top">
+        <div class="lg-brand-col">
+          <div class="lg-brand">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true">
+              <path d="M 4.688 136 C 68.373 136 120 187.627 120 251.312 C 120 252.883 119.967 254.445 119.905 256 L 0 256 L 0 136.096 C 1.555 136.034 3.117 136 4.688 136 Z M 251.312 136 C 252.883 136 254.445 136.034 256 136.096 L 256 256 L 136.095 256 C 136.032 254.438 136.001 252.875 136 251.312 C 136 187.627 187.627 136 251.312 136 Z M 119.905 0 C 119.967 1.555 120 3.117 120 4.688 C 120 68.373 68.373 120 4.687 120 C 3.117 120 1.555 119.967 0 119.905 L 0 0 Z M 256 119.905 C 254.445 119.967 252.883 120 251.312 120 C 187.627 120 136 68.373 136 4.687 C 136 3.117 136.033 1.555 136.095 0 L 256 0 Z"/>
+            </svg>
+            <span class="lg-brand-text">APEX LIQUIDITY</span>
+          </div>
+          <p class="lg-desc">Trading education for serious traders. Order flow, liquidity, psychology — taught the way it actually works.</p>
+        </div>
+        <div class="lg-links-col">
+          <div class="lg-col">
+            <h5>Discover</h5>
+            <ul>
+              <li><a href="#books">Anchored</a></li>
+              <li><a href="#books">Fortified</a></li>
+              <li><a href="#books">Full Bundle</a></li>
+              <li><a href="#resources">Resources</a></li>
+              <li><a href="#calculator">Calculators</a></li>
+            </ul>
+          </div>
+          <div class="lg-col">
+            <h5>The Mission</h5>
+            <ul>
+              <li><a href="#about">Origin Story</a></li>
+              <li><a href="#community">The Collective</a></li>
+              <li><a href="#resources">Newsroom Hub</a></li>
+              <li><a href="mailto:hello@apexliquidity.org">Join the Team</a></li>
+            </ul>
+          </div>
+          <div class="lg-col">
+            <h5>Concierge</h5>
+            <ul>
+              <li><a href="#contact">Get in Touch</a></li>
+              <li><a href="privacy-policy.html">Legal Privacy</a></li>
+              <li><a href="terms-of-service.html">User Agreement</a></li>
+              <li><a href="refund-policy.html">Report Concern</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="lg-bottom">
+        <p class="lg-copy">© 2025 Apex Liquidity · All rights reserved</p>
+        <div class="lg-socials">
+          <span class="lg-socials-label">Join the journey:</span>
+          <a href="https://www.youtube.com/@TheApexLiquidity" target="_blank" rel="noopener" aria-label="YouTube">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/apexliquidityreal/" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          </a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- CHECKOUT MODAL -->
+  <div class="modal-overlay" id="checkoutModal">
+    <div class="modal">
+      <button class="modal-close" onclick="closeCheckout()">✕</button>
+      <div class="modal-header">
+        <p class="modal-eyebrow">S E C U R E &nbsp; C H E C K O U T</p>
+        <h3 class="modal-title" id="modalTitle">Anchored</h3>
+        <p class="modal-price">$<span id="modalPrice">24</span></p>
+      </div>
+      <div class="modal-paypal">
+        <p class="modal-paypal-note">Complete your payment securely via PayPal.<br/>Pay with PayPal balance, debit, or any major card — no account required.</p>
+        <div id="paypal-button-container"></div>
+        <div class="modal-secure-note">
+          <span>🔒</span> Secured by PayPal. Your details are encrypted end-to-end.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SUCCESS TOAST -->
+  <div class="toast" id="toast">
+    <span>✦</span> Order confirmed! Check your email for download link.
+  </div>
+
+  <style>
+  /* APEX title override — strip AI-gold gradient */
+  .hero-title .title-apex .apex-letter{
+    background:none!important;-webkit-background-clip:initial!important;
+    -webkit-text-fill-color:initial!important;background-clip:initial!important;
+    color:#F0EDE5!important;text-shadow:none!important;
+    -webkit-text-stroke:1px rgba(196,150,46,.45);
+    font-weight:400!important;letter-spacing:.08em;
+  }
+  .hero-title .title-liq{
+    color:rgba(240,237,229,.55)!important;
+    letter-spacing:.4em!important;font-weight:300!important;
+  }
+  /* CUBES */
+  #cubesLayer .cubes-wrap{width:min(80vw,720px);aspect-ratio:1;position:relative}
+  #cubesLayer .cubes-scene{display:grid;width:100%;height:100%;perspective:99999999px;column-gap:4%;row-gap:4%}
+  #cubesLayer .cube{position:relative;width:100%;height:100%;aspect-ratio:1;transform-style:preserve-3d;will-change:transform}
+  #cubesLayer .cube-face{position:absolute;width:100%;height:100%;background:#120F17;border:2px dashed #5227FF}
+  #cubesLayer .cube-face--top{transform:translateY(-50%) rotateX(90deg)}
+  #cubesLayer .cube-face--bottom{transform:translateY(50%) rotateX(-90deg)}
+  #cubesLayer .cube-face--left{transform:translateX(-50%) rotateY(-90deg)}
+  #cubesLayer .cube-face--right{transform:translateX(50%) rotateY(90deg)}
+  #cubesLayer .cube-face--back,#cubesLayer .cube-face--front{transform:rotateY(-90deg) translateX(50%) rotateY(90deg)}
+  @media(prefers-reduced-motion:reduce){#cubesLayer{display:none}#lightningCanvas{display:none}}
+  </style>
+
+  <script>
+  // APEX SplitText — animate each letter on load
+  (function(){
+    if(typeof gsap==='undefined')return;
+    const letters=document.querySelectorAll('.apex-letter');
+    if(!letters.length)return;
+    gsap.set(letters,{opacity:0,y:60});
+    gsap.to(letters,{opacity:1,y:0,duration:.9,ease:'power3.out',stagger:.08,delay:.15});
+    // LIQUIDITY subtle fade
+    const liq=document.querySelector('.title-liq');
+    if(liq){gsap.set(liq,{opacity:0,y:20});gsap.to(liq,{opacity:1,y:0,duration:.8,ease:'power2.out',delay:.6})}
+    const sub=document.querySelector('.hero-sub');
+    if(sub){gsap.set(sub,{opacity:0,y:20});gsap.to(sub,{opacity:1,y:0,duration:.8,ease:'power2.out',delay:.85})}
+    const cta=document.querySelector('.hero-actions');
+    if(cta){gsap.set(cta,{opacity:0,y:20});gsap.to(cta,{opacity:1,y:0,duration:.8,ease:'power2.out',delay:1.05})}
+  })();
+
+  // Footer fade in
+  (function(){
+    const f=document.getElementById('glassFooter');
+    if(!f)return;
+    if(typeof gsap!=='undefined'){
+      gsap.to(f,{opacity:1,y:0,duration:1,delay:.4,ease:'power2.out'});
+    } else {
+      f.style.opacity=1;f.style.transform='translateY(0)';
+    }
+  })();
+
+  // CUBES (disabled — layer removed)
+  (function(){
+    const layer=document.getElementById('cubesLayer');
+    if(!layer||typeof gsap==='undefined')return;
+    const GRID=8,MAX_ANGLE=45,RADIUS=3,ENTER=0.3,LEAVE=0.6,RIPPLE_COLOR='#ff6b6b',RIPPLE_SPEED=1.5;
+    const wrap=document.createElement('div');wrap.className='cubes-wrap';
+    const scene=document.createElement('div');scene.className='cubes-scene';
+    scene.style.gridTemplateColumns=`repeat(${GRID},1fr)`;scene.style.gridTemplateRows=`repeat(${GRID},1fr)`;
+    const faces=['top','bottom','left','right','front','back'];
+    for(let r=0;r<GRID;r++)for(let c=0;c<GRID;c++){
+      const cube=document.createElement('div');cube.className='cube';cube.dataset.row=r;cube.dataset.col=c;
+      faces.forEach(f=>{const fe=document.createElement('div');fe.className='cube-face cube-face--'+f;cube.appendChild(fe)});
+      scene.appendChild(cube);
+    }
+    wrap.appendChild(scene);layer.appendChild(wrap);
+    const cubes=scene.querySelectorAll('.cube');
+    let running=false;
+    const tiltAt=(rc,cc)=>{
+      cubes.forEach(cube=>{
+        const r=+cube.dataset.row,c=+cube.dataset.col;
+        const dist=Math.hypot(r-rc,c-cc);
+        if(dist<=RADIUS){
+          const pct=1-dist/RADIUS;const a=pct*MAX_ANGLE;
+          gsap.to(cube,{duration:ENTER,ease:'power3.out',overwrite:true,rotateX:-a,rotateY:a});
+        } else {
+          gsap.to(cube,{duration:LEAVE,ease:'power3.out',overwrite:true,rotateX:0,rotateY:0});
+        }
+      });
+    };
+    // Auto animate
+    let pos={x:Math.random()*GRID,y:Math.random()*GRID},tgt={x:Math.random()*GRID,y:Math.random()*GRID};
+    const loop=()=>{
+      if(running){
+        pos.x+=(tgt.x-pos.x)*0.02;pos.y+=(tgt.y-pos.y)*0.02;
+        tiltAt(pos.y,pos.x);
+        if(Math.hypot(pos.x-tgt.x,pos.y-tgt.y)<0.15){tgt={x:Math.random()*GRID,y:Math.random()*GRID}}
+      }
+      requestAnimationFrame(loop);
+    };
+    requestAnimationFrame(loop);
+    // Only run when in view
+    if('IntersectionObserver' in window){
+      new IntersectionObserver(e=>{running=e[0].isIntersecting},{threshold:0}).observe(layer);
+    } else running=true;
+    // Pointer interaction
+    scene.addEventListener('pointermove',e=>{
+      const rect=scene.getBoundingClientRect();
+      const cw=rect.width/GRID,ch=rect.height/GRID;
+      const cc=(e.clientX-rect.left)/cw,rc=(e.clientY-rect.top)/ch;
+      tiltAt(rc,cc);
+    });
+    // Ripple on click
+    scene.addEventListener('click',e=>{
+      const rect=scene.getBoundingClientRect();
+      const cw=rect.width/GRID,ch=rect.height/GRID;
+      const colHit=Math.floor((e.clientX-rect.left)/cw),rowHit=Math.floor((e.clientY-rect.top)/ch);
+      const baseDelay=0.15/RIPPLE_SPEED,animDur=0.3/RIPPLE_SPEED,hold=0.6/RIPPLE_SPEED;
+      const rings={};
+      cubes.forEach(cube=>{
+        const r=+cube.dataset.row,c=+cube.dataset.col;
+        const ring=Math.round(Math.hypot(r-rowHit,c-colHit));
+        (rings[ring]=rings[ring]||[]).push(cube);
+      });
+      Object.keys(rings).map(Number).sort((a,b)=>a-b).forEach(ring=>{
+        const delay=ring*baseDelay;
+        const faces=rings[ring].flatMap(cube=>Array.from(cube.querySelectorAll('.cube-face')));
+        gsap.to(faces,{backgroundColor:RIPPLE_COLOR,duration:animDur,delay,ease:'power3.out'});
+        gsap.to(faces,{backgroundColor:'#120F17',duration:animDur,delay:delay+animDur+hold,ease:'power3.out'});
+      });
+    });
+    scene.style.pointerEvents='auto';
+    layer.style.pointerEvents='none';
+    wrap.style.pointerEvents='auto';
+  })();
+  </script>
+  <script src="app.js?v=36"></script>
+  <script src="animations.js?v=36"></script>
+</body>
+</html>
