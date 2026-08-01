@@ -37,7 +37,7 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500&family=Bebas+Neue&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500&family=Bebas+Neue&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="style.css?v=38" />
   <script src="https://cdn.jsdelivr.net/npm/motion@latest/dist/motion.js"></script>
@@ -64,34 +64,55 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
       <a href="#books" class="nav-cta">Get Access</a>
-      <button class="hamburger" id="hamburger" aria-label="Menu">
-        <span></span><span></span><span></span>
+      <button class="hamburger sm-toggle" id="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span class="sm-toggle-text" id="smToggleText">Menu</span>
+        <span class="sm-icon" id="smIcon">
+          <span class="sm-icon-line sm-icon-h"></span>
+          <span class="sm-icon-line sm-icon-v"></span>
+        </span>
       </button>
     </div>
-    <div class="mobile-menu" id="mobileMenu">
-      <a href="#books" onclick="closeMobile()">Books</a>
-      <a href="#resources" onclick="closeMobile()">Resources</a>
-      <a href="#calculator" onclick="closeMobile()">Calculator</a>
-      <a href="#community" onclick="closeMobile()">Community</a>
-      <a href="#contact" onclick="closeMobile()">Contact</a>
+
+    <!-- STAGGERED MOBILE MENU -->
+    <div class="sm-wrapper" id="mobileMenu" data-open="false">
+      <div class="sm-prelayers" id="smPrelayers" aria-hidden="true">
+        <div class="sm-prelayer" style="background:#1b1812"></div>
+        <div class="sm-prelayer" style="background:#0e0d0b"></div>
+      </div>
+      <aside class="sm-panel" id="smPanel">
+        <ul class="sm-panel-list">
+          <li class="sm-panel-itemWrap"><a class="sm-panel-item" href="#books" data-index="01" onclick="closeMobile()"><span class="sm-panel-itemLabel">Books</span></a></li>
+          <li class="sm-panel-itemWrap"><a class="sm-panel-item" href="#resources" data-index="02" onclick="closeMobile()"><span class="sm-panel-itemLabel">Resources</span></a></li>
+          <li class="sm-panel-itemWrap"><a class="sm-panel-item" href="#calculator" data-index="03" onclick="closeMobile()"><span class="sm-panel-itemLabel">Calculator</span></a></li>
+          <li class="sm-panel-itemWrap"><a class="sm-panel-item" href="#community" data-index="04" onclick="closeMobile()"><span class="sm-panel-itemLabel">Community</span></a></li>
+          <li class="sm-panel-itemWrap"><a class="sm-panel-item" href="#contact" data-index="05" onclick="closeMobile()"><span class="sm-panel-itemLabel">Contact</span></a></li>
+        </ul>
+        <div class="sm-socials">
+          <h3 class="sm-socials-title">Follow</h3>
+          <div class="sm-socials-list">
+            <a href="https://www.youtube.com/@TheApexLiquidity" target="_blank" rel="noopener" class="sm-socials-link">YouTube</a>
+            <a href="https://www.instagram.com/apexliquidityreal/" target="_blank" rel="noopener" class="sm-socials-link">Instagram</a>
+          </div>
+        </div>
+      </aside>
     </div>
   </nav>
 
   <!-- HERO -->
   <section id="hero">
     <video id="heroVideo" autoplay muted loop playsinline preload="auto" aria-hidden="true"
-      style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;pointer-events:none">
+      style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;pointer-events:none;filter:brightness(1.35) contrast(1.05)">
       <source src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260429_114316_1c7889ad-2885-410e-b493-98119fee0ddb.mp4" type="video/mp4">
     </video>
     <div id="heroVideoTint" aria-hidden="true"
-      style="position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(0,0,0,.35) 0%,rgba(0,0,0,.75) 100%);z-index:1;pointer-events:none"></div>
+      style="position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(0,0,0,.18) 0%,rgba(0,0,0,.58) 100%);z-index:1;pointer-events:none"></div>
     <div class="hero-bg" style="display:none"></div>
     <div class="hero-content" style="position:relative;z-index:3">
       <h1 class="hero-title">
         <span class="title-apex"><span class="apex-letter">A</span><span class="apex-letter">P</span><span class="apex-letter">E</span><span class="apex-letter">X</span></span>
         <span class="title-liq">LIQUIDITY</span>
       </h1>
-      <p class="hero-sub">Trading knowledge <em style="color:#C4962E;font-style:italic">not of this world.</em><br/>Institutional-grade insight, taught from every corner of the market.</p>
+      <p class="hero-sub">A vantage point most traders never reach.<br/>Order flow, liquidity, and psychology — seen from above the noise.</p>
       <div class="hero-actions">
         <a href="#books" class="btn-gold">Access the Vault</a>
       </div>
@@ -623,13 +644,55 @@
   </div>
 
   <style>
-  /* APEX title override — strip AI-gold gradient */
+  /* STAGGERED MOBILE MENU */
+  .sm-toggle{position:relative;display:none;align-items:center;gap:10px;background:none;border:none;cursor:pointer;padding:4px;color:var(--gold)}
+  .sm-toggle-text{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+  .sm-icon{position:relative;width:18px;height:18px;flex:0 0 18px;display:inline-flex;align-items:center;justify-content:center}
+  .sm-icon-line{position:absolute;left:50%;top:50%;width:100%;height:1.5px;background:currentColor;border-radius:2px;transform:translate(-50%,-50%)}
+  .sm-icon-v{transform:translate(-50%,-50%) rotate(90deg)}
+  @media(max-width:768px){
+    .nav-links,.nav-cta{display:none}
+    .sm-toggle{display:inline-flex}
+  }
+
+  .sm-wrapper{position:fixed;inset:0;z-index:200;pointer-events:none;visibility:hidden}
+  .sm-wrapper[data-open="true"]{pointer-events:auto;visibility:visible}
+  .sm-prelayers{position:fixed;top:0;right:0;bottom:0;width:100%;pointer-events:none;z-index:1}
+  .sm-prelayer{position:absolute;top:0;right:0;height:100%;width:100%}
+  .sm-panel{
+    position:fixed;top:0;right:0;bottom:0;width:100%;
+    background:rgba(10,9,7,.98);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
+    display:flex;flex-direction:column;justify-content:center;
+    padding:8vh 8vw;z-index:2;
+  }
+  .sm-panel-list{list-style:none;margin:0 0 48px;padding:0;display:flex;flex-direction:column;gap:4px}
+  .sm-panel-itemWrap{overflow:hidden;line-height:1}
+  .sm-panel-item{
+    position:relative;display:flex;align-items:baseline;gap:16px;
+    text-decoration:none;color:#F0EDE5;
+    font-family:'Poppins',sans-serif;font-weight:600;font-size:clamp(28px,8vw,44px);
+    letter-spacing:-.01em;text-transform:uppercase;padding:10px 0;
+  }
+  .sm-panel-item::before{
+    content:attr(data-index);font-family:'Inter',sans-serif;font-weight:400;
+    font-size:13px;color:var(--gold);letter-spacing:.1em;
+    opacity:var(--sm-num-opacity,0);transition:opacity .3s;
+  }
+  .sm-panel-itemLabel{display:inline-block;will-change:transform}
+  .sm-socials{border-top:1px solid rgba(240,237,229,.12);padding-top:24px}
+  .sm-socials-title{margin:0 0 12px;font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);font-weight:500}
+  .sm-socials-list{display:flex;gap:24px}
+  .sm-socials-link{color:rgba(240,237,229,.6);text-decoration:none;font-size:13px;letter-spacing:.1em;text-transform:uppercase;transition:color .2s}
+  .sm-socials-link:hover{color:var(--gold)}
+
+  /* APEX title override — strip AI-gold gradient, switch to Poppins */
   .hero-title .title-apex .apex-letter{
     background:none!important;-webkit-background-clip:initial!important;
     -webkit-text-fill-color:initial!important;background-clip:initial!important;
     color:#F0EDE5!important;text-shadow:none!important;
     -webkit-text-stroke:1px rgba(196,150,46,.45);
-    font-weight:400!important;letter-spacing:.08em;
+    font-family:'Poppins',sans-serif!important;
+    font-weight:700!important;letter-spacing:.05em;
   }
   .hero-title .title-liq{
     color:rgba(240,237,229,.55)!important;
@@ -663,6 +726,122 @@
     if(sub){gsap.set(sub,{opacity:0,y:20});gsap.to(sub,{opacity:1,y:0,duration:.8,ease:'power2.out',delay:.85})}
     const cta=document.querySelector('.hero-actions');
     if(cta){gsap.set(cta,{opacity:0,y:20});gsap.to(cta,{opacity:1,y:0,duration:.8,ease:'power2.out',delay:1.05})}
+  })();
+
+  // STAGGERED MOBILE MENU — vanilla port of React Bits StaggeredMenu
+  (function(){
+    const wrapper = document.getElementById('mobileMenu');
+    const toggle = document.getElementById('hamburger');
+    const icon = document.getElementById('smIcon');
+    const toggleText = document.getElementById('smToggleText');
+    const panel = document.getElementById('smPanel');
+    const layers = wrapper ? Array.from(wrapper.querySelectorAll('.sm-prelayer')) : [];
+    if(!wrapper || !toggle || typeof gsap === 'undefined') return;
+
+    let open = false, busy = false;
+
+    function buildOpenTl(){
+      const itemEls = Array.from(panel.querySelectorAll('.sm-panel-itemLabel'));
+      const itemAnchors = Array.from(panel.querySelectorAll('.sm-panel-item'));
+      const socialTitle = panel.querySelector('.sm-socials-title');
+      const socialLinks = Array.from(panel.querySelectorAll('.sm-socials-link'));
+
+      gsap.set(itemEls, {yPercent:140, rotate:8});
+      itemAnchors.forEach(a => a.style.setProperty('--sm-num-opacity','0'));
+      if(socialTitle) gsap.set(socialTitle, {opacity:0});
+      if(socialLinks.length) gsap.set(socialLinks, {y:20, opacity:0});
+
+      const tl = gsap.timeline({paused:true});
+      layers.forEach((el,i) => {
+        tl.fromTo(el, {xPercent:100}, {xPercent:0, duration:.5, ease:'power4.out'}, i*0.08);
+      });
+      const lastTime = layers.length ? (layers.length-1)*0.08 : 0;
+      const panelStart = lastTime + (layers.length ? 0.08 : 0);
+      tl.fromTo(panel, {xPercent:100}, {xPercent:0, duration:.6, ease:'power4.out'}, panelStart);
+
+      if(itemEls.length){
+        const itemsStart = panelStart + 0.6*0.2;
+        tl.to(itemEls, {yPercent:0, rotate:0, duration:.9, ease:'power4.out', stagger:.09}, itemsStart);
+        itemAnchors.forEach((a,i) => {
+          tl.to({}, {duration:.01, onComplete:()=>a.style.setProperty('--sm-num-opacity','1')}, itemsStart + i*0.09 + 0.1);
+        });
+      }
+      if(socialTitle || socialLinks.length){
+        const socialsStart = panelStart + 0.6*0.45;
+        if(socialTitle) tl.to(socialTitle, {opacity:1, duration:.5, ease:'power2.out'}, socialsStart);
+        if(socialLinks.length) tl.to(socialLinks, {y:0, opacity:1, duration:.5, ease:'power3.out', stagger:.07}, socialsStart+0.05);
+      }
+      return tl;
+    }
+
+    function playOpen(){
+      if(busy) return;
+      busy = true;
+      wrapper.style.visibility = 'visible';
+      const tl = buildOpenTl();
+      tl.eventCallback('onComplete', () => { busy = false; });
+      tl.play(0);
+    }
+    function playClose(){
+      busy = true;
+      const all = [...layers, panel];
+      gsap.to(all, {xPercent:100, duration:.4, ease:'power3.in', overwrite:'auto', onComplete:() => {
+        wrapper.style.visibility = 'hidden';
+        busy = false;
+      }});
+    }
+
+    function setIcon(opening){
+      gsap.to(icon, {rotate: opening ? 225 : 0, duration: opening ? .7 : .35, ease: opening ? 'power4.out' : 'power3.inOut'});
+    }
+    function setText(opening){
+      if(toggleText) toggleText.textContent = opening ? 'Close' : 'Menu';
+    }
+
+    function toggleMenu(){
+      const next = !open;
+      open = next;
+      wrapper.setAttribute('data-open', String(next));
+      toggle.setAttribute('aria-expanded', String(next));
+      setIcon(next); setText(next);
+      if(next) playOpen(); else playClose();
+    }
+
+    toggle.addEventListener('click', toggleMenu);
+    window.__closeStaggeredMenu = () => {
+      if(!open) return;
+      open = false;
+      wrapper.setAttribute('data-open','false');
+      toggle.setAttribute('aria-expanded','false');
+      setIcon(false); setText(false);
+      playClose();
+    };
+    document.addEventListener('click', (e) => {
+      if(!open) return;
+      if(panel.contains(e.target) || toggle.contains(e.target)) return;
+      window.__closeStaggeredMenu();
+    });
+  })();
+
+  // HERO VIDEO — loop only the last stretch (avoids jarring restart-from-black)
+  (function(){
+    const v = document.getElementById('heroVideo');
+    if(!v) return;
+    const LOOP_WINDOW = 6; // seconds from the end to loop
+    let loopStart = 0;
+    v.addEventListener('loadedmetadata', () => {
+      loopStart = Math.max(0, v.duration - LOOP_WINDOW);
+    });
+    v.addEventListener('timeupdate', () => {
+      if(loopStart && v.currentTime >= v.duration - 0.15){
+        v.currentTime = loopStart;
+        v.play();
+      }
+    });
+    v.addEventListener('ended', () => {
+      if(loopStart) v.currentTime = loopStart;
+      v.play();
+    });
   })();
 
   // Footer fade in

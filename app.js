@@ -83,14 +83,9 @@ window.addEventListener('scroll', () => {
   navbar.classList.toggle('scrolled', window.scrollY > 40);
 });
 
-// Mobile menu
-const hamburger = document.getElementById('hamburger');
-const mobileMenu = document.getElementById('mobileMenu');
-hamburger.addEventListener('click', () => {
-  mobileMenu.classList.toggle('open');
-});
+// Mobile menu — staggered open/close handled in index.html inline script
 function closeMobile() {
-  mobileMenu.classList.remove('open');
+  window.__closeStaggeredMenu && window.__closeStaggeredMenu();
 }
 
 // Checkout modal — renders the PayPal Hosted Button for the chosen product

@@ -1,0 +1,6 @@
+.DS_Store
+.backup-v1/
+.claude/
+*.mov
+Screenshot*.png
+__pycache__/
