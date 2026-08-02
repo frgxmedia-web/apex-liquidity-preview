@@ -916,6 +916,14 @@ section { padding: 100px 0; }
   letter-spacing: 0.05em;
   margin-bottom: 10px;
 }
+.book-meta {
+  font-family: var(--font-ui);
+  font-size: 10.5px;
+  letter-spacing: 0.16em;
+  color: var(--gold);
+  margin-bottom: 12px;
+  opacity: 0.85;
+}
 .book-desc {
   font-family: var(--font-body);
   font-size: 15px;
