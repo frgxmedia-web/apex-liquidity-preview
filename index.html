@@ -72,31 +72,33 @@
         </span>
       </button>
     </div>
-
-    <!-- STAGGERED MOBILE MENU -->
-    <div class="sm-wrapper" id="mobileMenu" data-open="false">
-      <div class="sm-prelayers" id="smPrelayers" aria-hidden="true">
-        <div class="sm-prelayer" style="background:#1b1812"></div>
-        <div class="sm-prelayer" style="background:#0e0d0b"></div>
-      </div>
-      <aside class="sm-panel" id="smPanel">
-        <ul class="sm-panel-list">
-          <li class="sm-panel-itemWrap"><a class="sm-panel-item" href="#books" data-index="01" onclick="closeMobile()"><span class="sm-panel-itemLabel">Books</span></a></li>
-          <li class="sm-panel-itemWrap"><a class="sm-panel-item" href="#resources" data-index="02" onclick="closeMobile()"><span class="sm-panel-itemLabel">Resources</span></a></li>
-          <li class="sm-panel-itemWrap"><a class="sm-panel-item" href="#calculator" data-index="03" onclick="closeMobile()"><span class="sm-panel-itemLabel">Calculator</span></a></li>
-          <li class="sm-panel-itemWrap"><a class="sm-panel-item" href="#community" data-index="04" onclick="closeMobile()"><span class="sm-panel-itemLabel">Community</span></a></li>
-          <li class="sm-panel-itemWrap"><a class="sm-panel-item" href="#contact" data-index="05" onclick="closeMobile()"><span class="sm-panel-itemLabel">Contact</span></a></li>
-        </ul>
-        <div class="sm-socials">
-          <h3 class="sm-socials-title">Follow</h3>
-          <div class="sm-socials-list">
-            <a href="https://www.youtube.com/@TheApexLiquidity" target="_blank" rel="noopener" class="sm-socials-link">YouTube</a>
-            <a href="https://www.instagram.com/apexliquidityreal/" target="_blank" rel="noopener" class="sm-socials-link">Instagram</a>
-          </div>
-        </div>
-      </aside>
-    </div>
   </nav>
+
+  <!-- STAGGERED MOBILE MENU — kept OUTSIDE <nav> on purpose: #navbar.scrolled uses
+       backdrop-filter, which creates a CSS containing block and would re-anchor this
+       fixed-position panel to the (short) nav box instead of the full viewport. -->
+  <div class="sm-wrapper" id="mobileMenu" data-open="false">
+    <div class="sm-prelayers" id="smPrelayers" aria-hidden="true">
+      <div class="sm-prelayer" style="background:#1b1812"></div>
+      <div class="sm-prelayer" style="background:#0e0d0b"></div>
+    </div>
+    <aside class="sm-panel" id="smPanel">
+      <ul class="sm-panel-list">
+        <li class="sm-panel-itemWrap"><a class="sm-panel-item" href="#books" data-index="01" onclick="closeMobile()"><span class="sm-panel-itemLabel">Books</span></a></li>
+        <li class="sm-panel-itemWrap"><a class="sm-panel-item" href="#resources" data-index="02" onclick="closeMobile()"><span class="sm-panel-itemLabel">Resources</span></a></li>
+        <li class="sm-panel-itemWrap"><a class="sm-panel-item" href="#calculator" data-index="03" onclick="closeMobile()"><span class="sm-panel-itemLabel">Calculator</span></a></li>
+        <li class="sm-panel-itemWrap"><a class="sm-panel-item" href="#community" data-index="04" onclick="closeMobile()"><span class="sm-panel-itemLabel">Community</span></a></li>
+        <li class="sm-panel-itemWrap"><a class="sm-panel-item" href="#contact" data-index="05" onclick="closeMobile()"><span class="sm-panel-itemLabel">Contact</span></a></li>
+      </ul>
+      <div class="sm-socials">
+        <h3 class="sm-socials-title">Follow</h3>
+        <div class="sm-socials-list">
+          <a href="https://www.youtube.com/@TheApexLiquidity" target="_blank" rel="noopener" class="sm-socials-link">YouTube</a>
+          <a href="https://www.instagram.com/apexliquidityreal/" target="_blank" rel="noopener" class="sm-socials-link">Instagram</a>
+        </div>
+      </div>
+    </aside>
+  </div>
 
   <!-- HERO -->
   <section id="hero">
@@ -705,18 +707,33 @@
     text-shadow:0 2px 10px rgba(0,0,0,.65);
   }
 
-  /* APEX title override — strip AI-gold gradient, switch to Poppins */
+  /* Hero content sat centered on the video, dropping the CTA right onto the
+     figure in the shot. Nudge the whole block up so it clears her. */
+  .hero-content{
+    transform:translateY(-10vh);
+  }
+  @media(max-width:768px){
+    .hero-content{transform:translateY(-6vh)}
+  }
+
+  /* APEX title override — clean serif matching the nav mark, no gradient/stroke/glow */
+  .hero-title .title-apex{
+    filter:none!important;
+    letter-spacing:.14em!important;
+  }
   .hero-title .title-apex .apex-letter{
     background:none!important;-webkit-background-clip:initial!important;
     -webkit-text-fill-color:initial!important;background-clip:initial!important;
-    color:#F0EDE5!important;text-shadow:none!important;
-    -webkit-text-stroke:1px rgba(196,150,46,.45);
-    font-family:'Poppins',sans-serif!important;
-    font-weight:700!important;letter-spacing:.05em;
+    color:#F0EDE5!important;
+    -webkit-text-stroke:0!important;
+    font-family:var(--font-title)!important;
+    font-weight:500!important;
+    filter:drop-shadow(0 2px 14px rgba(0,0,0,.5))!important;
+    transition:none!important;
   }
   .hero-title .title-liq{
-    color:rgba(240,237,229,.55)!important;
-    letter-spacing:.4em!important;font-weight:300!important;
+    color:rgba(240,237,229,.6)!important;
+    letter-spacing:.5em!important;font-weight:400!important;
   }
   /* CUBES */
   #cubesLayer .cubes-wrap{width:min(80vw,720px);aspect-ratio:1;position:relative}
